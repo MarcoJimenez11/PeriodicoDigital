@@ -1,0 +1,5 @@
+@use '../global/variables';
+
+body {
+    background-color: variables.$color-neutro;
+}

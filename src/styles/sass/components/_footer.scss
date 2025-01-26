@@ -1,0 +1,16 @@
+@use '../global/variables';
+@use '../global/mixins';
+
+footer {
+    background-color: variables.$color-principal;
+
+    a {
+        color: variables.$color-neutro;
+    }
+
+    i {
+        cursor: pointer;
+        @include mixins.dinamic-text-size(2em);
+        color: variables.$color-neutro;
+    }
+}

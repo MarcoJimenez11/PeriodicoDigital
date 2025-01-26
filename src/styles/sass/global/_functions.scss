@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "sass:math";
+
+/*
+  Devuelve el color dado por parámetro oscurecido en un porcentaje indicado
+*/
+@function darken($color, $porcentaje: 10%) {
+  $color-negro: rgba(0, 0, 0, 1);
+  @return color.mix($color-negro, $color, $porcentaje);
+}

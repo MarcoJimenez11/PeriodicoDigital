@@ -1,0 +1,40 @@
+@use '../global/variables';
+@use '../global/mixins';
+
+header {
+    display: block;
+    @include mixins.dinamic-banner();
+
+    #logo {
+        margin-top: variables.$padding-base;
+    }
+
+    .banner {
+        section {
+            margin-top: variables.$padding-base;
+
+            button {
+                padding: 10px;
+            }
+
+            #loginIcon {
+                @include mixins.dinamic-text-size(3em);
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-align: center;
+            padding-top: variables.$padding-base;
+            padding-bottom: variables.$padding-base;
+            width: 20%;
+        }
+    }
+
+}

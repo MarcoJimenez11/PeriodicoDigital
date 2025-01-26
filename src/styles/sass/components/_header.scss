@@ -1,0 +1,39 @@
+@use '../global/variables';
+@use '../global/functions';
+@use '../global/mixins';
+
+
+header {
+    background-color: variables.$color-principal;
+    color: variables.$color-neutro;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+#loginIcon {
+    cursor: pointer;
+    border: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: variables.$color-neutro2;
+
+    &:hover {
+        @include mixins.box-shadow(2px, 2px, 2px, variables.$color-neutro2);
+    }
+
+}
+
+.menu {
+
+    a {
+        color: variables.$color-neutro;
+
+        &:hover {
+            background-color: functions.darken(variables.$color-principal, 30%);
+        }
+    }
+}
+
+

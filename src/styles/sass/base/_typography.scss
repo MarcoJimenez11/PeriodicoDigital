@@ -1,0 +1,44 @@
+@use '../global/mixins';
+
+@font-face {
+    font-family: DejaVuSans;
+    src: url("../../fonts/DejaVuSans.ttf");
+}
+
+@font-face {
+
+    font-family: IBMPlexSerif-Regular;
+    src: url("../../fonts/IBMPlexSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: GuardianSansSemibold;
+    src: url("../../fonts/GuardianSansSemibold.otf");
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    font-family: DejaVuSans;
+    @include mixins.dinamic-text-size(2.5em);
+}
+
+.buttonCTA {
+    @include mixins.dinamic-text-size(1em);
+}
+
+button {
+    font-family: DejaVuSans;
+}
+
+.menu {
+    font-family: DejaVuSans;
+    @include mixins.dinamic-text-size(1em);
+}
+
+h3 {
+    font-family: GuardianSansSemibold;
+    @include mixins.dinamic-text-size(2em);
+}

@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "jsdoc": "^4.0.4",
+    "parcel": "^2.13.3"
+  },
+  "scripts": {
+    "test": "echo hola",
+    "compress": "{{ run command to compress files }}",
+    "postcompress": "{{ executes AFTER `compress` script }}"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2"
+  }
+}

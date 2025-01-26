@@ -1,0 +1,109 @@
+/* global/_mixins.scss */
+@use '../global/variables';
+@use '../global/functions';
+@use 'sass:math';
+
+/*
+    EStructura general para los botones, con color de texto y fondo indicados por parámetro
+*/
+@mixin button($background-color: variables.$color-principal, $text-color: variables.$color-neutro2) {
+    background-color: $background-color;
+    color: $text-color;
+    border-color: variables.$color-neutro2;
+
+    border-radius: 8px;
+
+    &:hover {
+        background-color: functions.darken(variables.$color-resalto, 15%);
+        cursor: pointer;
+    }
+}
+
+/*
+    Aplica una sombra con el tamaño y color indicados
+*/
+@mixin box-shadow($x-axis: 1px, $y-axis: 1px, $blur: 2px, $color: black) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+/*
+    Establece un tamaño de texto dinámico según la resolución de la pantalla, variando un tamaño predefinido por parámetro
+*/
+@mixin dinamic-text-size($default-size: 1em) {
+
+    font-size: $default-size;
+
+    @media (max-width: 480px) {
+        font-size: math.div($default-size, 1.5);
+    }
+
+    @media (max-width: 250px) {
+        font-size: math.div($default-size, 2.5);
+    }
+
+    @media (max-width: 170px) {
+        font-size: math.div($default-size, 3);
+    }
+
+    @media (max-width: 100px) {
+        font-size: math.div($default-size, 4);
+    }
+}
+
+/*
+    Estructura del banner para cambiar su organización según la resolución de la pantalla
+*/
+@mixin dinamic-banner() {
+
+    /*
+        Para pantallas anchas, mantiene el logo centrado y los botones alineados a la derecha
+    */
+    @media (min-width: 768px) {
+        .banner {
+            position: relative;
+            height: 10vh;
+
+            #logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            section {
+                position: absolute;
+                right: variables.$padding-base;
+            }
+        }
+    }
+
+    /*
+        Para pantallas estrechas, mantiene el logo alineado a la izquierda y los botones a la derecha
+    */
+    @media (max-width: 767px) {
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            padding-left: variables.$padding-base;
+            padding-right: variables.$padding-base;
+        }
+    }
+
+    /*
+        Para pantallas muy estrechas, mantiene estructura de bloque con un elemento por cada fila
+    */
+    @media (max-width: 344px) {
+        .banner {
+            display: block;
+            padding-left: variables.$padding-base;
+            padding-right: variables.$padding-base;
+
+            #logo {
+                text-align: center;
+            }
+
+            section {
+                text-align: center;
+            }
+        }
+    }
+}
