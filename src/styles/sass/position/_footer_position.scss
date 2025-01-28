@@ -5,16 +5,22 @@ footer {
     padding-bottom: 20px;
     padding-right: 20px;
     margin: auto;
+    //Pegar al fondo
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 
     a {
-        margin-left: 20px;
+        margin-right: 20px;
         margin-top: auto;
         margin-bottom: auto;
+
+        @media (max-width: 250px) {
+            margin-right: 2px;
+        }
     }
 
     i {
-        margin-left: 20px;
-        margin-top: auto;
-        margin-bottom: auto
+        @extend a;
     }
 }

@@ -5,5 +5,6 @@ $color-resalto: #b46e3b;
 $color-neutro: #e9f6ff;
 $color-neutro2: #171717;
 
-//Espaciado base
-$padding-base: 20px;
+//Espaciado
+$padding: ("small": 10px, "medium": 20px, "big": 40px);
+// $padding-base: 20px;

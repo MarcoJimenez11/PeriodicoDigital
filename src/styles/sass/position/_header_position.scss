@@ -1,20 +1,21 @@
 @use '../global/variables';
 @use '../global/mixins';
+@use "sass:map";
 
 header {
     display: block;
     @include mixins.dinamic-banner();
 
     #logo {
-        margin-top: variables.$padding-base;
+        margin-top: map.get(variables.$padding, "medium");
     }
 
     .banner {
         section {
-            margin-top: variables.$padding-base;
+            margin-top: map.get(variables.$padding, "medium");
 
             button {
-                padding: 10px;
+                padding: map.get(variables.$padding, "small");
             }
 
             #loginIcon {
@@ -31,8 +32,8 @@ header {
 
         a {
             text-align: center;
-            padding-top: variables.$padding-base;
-            padding-bottom: variables.$padding-base;
+            padding-top: map.get(variables.$padding, "medium");
+            padding-bottom: map.get(variables.$padding, "medium");
             width: 20%;
         }
     }

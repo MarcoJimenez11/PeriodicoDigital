@@ -31,7 +31,7 @@ header {
         color: variables.$color-neutro;
 
         &:hover {
-            background-color: functions.darken(variables.$color-principal, 30%);
+            background-color: functions.apply-filter(variables.$color-principal, 30%);
         }
     }
 }

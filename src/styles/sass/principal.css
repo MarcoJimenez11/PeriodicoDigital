@@ -15,6 +15,9 @@
 /*
     Estructura del banner para cambiar su organización según la resolución de la pantalla
 */
+/*
+    Este mixin solo existe para usar interpolación, no se usa en la página
+*/
 @font-face {
   font-family: DejaVuSans;
   src: url("../../fonts/DejaVuSans.ttf");
@@ -33,7 +36,21 @@ a {
 
 #logo {
   font-family: DejaVuSans;
-  font-size: 2.5em;
+}
+@media (min-width: 1640px) {
+  #logo {
+    font-size: 5em;
+  }
+}
+@media (max-width: 1639px) {
+  #logo {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  #logo {
+    font-size: 1.6666666667em;
+  }
 }
 @media (max-width: 480px) {
   #logo {
@@ -56,8 +73,20 @@ a {
   }
 }
 
-.buttonCTA {
-  font-size: 1em;
+@media (min-width: 1640px) {
+  .buttonCTA {
+    font-size: 2em;
+  }
+}
+@media (max-width: 1639px) {
+  .buttonCTA {
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .buttonCTA {
+    font-size: 0.6666666667em;
+  }
 }
 @media (max-width: 480px) {
   .buttonCTA {
@@ -86,7 +115,21 @@ button {
 
 .menu {
   font-family: DejaVuSans;
-  font-size: 1em;
+}
+@media (min-width: 1640px) {
+  .menu {
+    font-size: 2em;
+  }
+}
+@media (max-width: 1639px) {
+  .menu {
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .menu {
+    font-size: 0.6666666667em;
+  }
 }
 @media (max-width: 480px) {
   .menu {
@@ -111,26 +154,76 @@ button {
 
 h3 {
   font-family: GuardianSansSemibold;
-  font-size: 2em;
+}
+@media (min-width: 1640px) {
+  h3 {
+    font-size: 3.4em;
+  }
+}
+@media (max-width: 1639px) {
+  h3 {
+    font-size: 1.7em;
+  }
 }
 @media (max-width: 480px) {
   h3 {
-    font-size: 1.3333333333em;
+    font-size: 1.1333333333em;
+  }
+}
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.1333333333em;
   }
 }
 @media (max-width: 250px) {
   h3 {
-    font-size: 0.8em;
+    font-size: 0.68em;
   }
 }
 @media (max-width: 170px) {
   h3 {
-    font-size: 0.6666666667em;
+    font-size: 0.5666666667em;
   }
 }
 @media (max-width: 100px) {
   h3 {
-    font-size: 0.5em;
+    font-size: 0.425em;
+  }
+}
+
+@media (min-width: 1640px) {
+  footer #direccion {
+    font-size: 2em;
+  }
+}
+@media (max-width: 1639px) {
+  footer #direccion {
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  footer #direccion {
+    font-size: 0.6666666667em;
+  }
+}
+@media (max-width: 480px) {
+  footer #direccion {
+    font-size: 0.6666666667em;
+  }
+}
+@media (max-width: 250px) {
+  footer #direccion {
+    font-size: 0.4em;
+  }
+}
+@media (max-width: 170px) {
+  footer #direccion {
+    font-size: 0.3333333333em;
+  }
+}
+@media (max-width: 100px) {
+  footer #direccion {
+    font-size: 0.25em;
   }
 }
 
@@ -195,8 +288,22 @@ footer a {
 }
 footer i {
   cursor: pointer;
-  font-size: 2em;
   color: #e9f6ff;
+}
+@media (min-width: 1640px) {
+  footer i {
+    font-size: 4em;
+  }
+}
+@media (max-width: 1639px) {
+  footer i {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  footer i {
+    font-size: 1.3333333333em;
+  }
 }
 @media (max-width: 480px) {
   footer i {
@@ -219,9 +326,23 @@ footer i {
   }
 }
 
-.newsBlock {
-  max-width: 400px;
-  min-width: 100px;
+@media (min-width: 3200px) {
+  .newsBlock {
+    max-width: 1200px;
+    min-width: 800px;
+  }
+}
+@media (max-width: 3199px) {
+  .newsBlock {
+    max-width: 800px;
+    min-width: 400px;
+  }
+}
+@media (max-width: 1640px) {
+  .newsBlock {
+    max-width: 400px;
+    min-width: 100px;
+  }
 }
 .newsBlock img {
   width: 100%;
@@ -295,8 +416,22 @@ header .banner section button {
   padding: 10px;
 }
 header .banner section #loginIcon {
-  font-size: 3em;
   vertical-align: middle;
+}
+@media (min-width: 1640px) {
+  header .banner section #loginIcon {
+    font-size: 6em;
+  }
+}
+@media (max-width: 1639px) {
+  header .banner section #loginIcon {
+    font-size: 3em;
+  }
+}
+@media (max-width: 480px) {
+  header .banner section #loginIcon {
+    font-size: 2em;
+  }
 }
 @media (max-width: 480px) {
   header .banner section #loginIcon {
@@ -341,24 +476,26 @@ footer {
   padding-bottom: 20px;
   padding-right: 20px;
   margin: auto;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
-footer a {
-  margin-left: 20px;
+footer a, footer i {
+  margin-right: 20px;
   margin-top: auto;
   margin-bottom: auto;
 }
-footer i {
-  margin-left: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
+@media (max-width: 250px) {
+  footer a, footer i {
+    margin-right: 2px;
+  }
 }
-
 .newsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   margin-right: 20px;
   margin-left: 20px;
 }

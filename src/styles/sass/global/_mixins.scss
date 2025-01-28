@@ -2,6 +2,7 @@
 @use '../global/variables';
 @use '../global/functions';
 @use 'sass:math';
+@use "sass:map";
 
 /*
     EStructura general para los botones, con color de texto y fondo indicados por parámetro
@@ -14,7 +15,7 @@
     border-radius: 8px;
 
     &:hover {
-        background-color: functions.darken(variables.$color-resalto, 15%);
+        background-color: functions.apply-filter(variables.$color-resalto, 15%);
         cursor: pointer;
     }
 }
@@ -31,7 +32,17 @@
 */
 @mixin dinamic-text-size($default-size: 1em) {
 
-    font-size: $default-size;
+    @media (min-width: 1640px) {
+        font-size: $default-size * 2;
+    }
+
+    @media (max-width: 1639px) {
+        font-size: $default-size;
+    }
+
+    @media (max-width: 480px) {
+        font-size: math.div($default-size, 1.5);
+    }
 
     @media (max-width: 480px) {
         font-size: math.div($default-size, 1.5);
@@ -71,7 +82,7 @@
 
             section {
                 position: absolute;
-                right: variables.$padding-base;
+                right: map.get(variables.$padding, "medium");
             }
         }
     }
@@ -83,8 +94,8 @@
         .banner {
             display: flex;
             justify-content: space-between;
-            padding-left: variables.$padding-base;
-            padding-right: variables.$padding-base;
+            padding-left: map.get(variables.$padding, "medium");
+            padding-right: map.get(variables.$padding, "medium");
         }
     }
 
@@ -94,8 +105,8 @@
     @media (max-width: 344px) {
         .banner {
             display: block;
-            padding-left: variables.$padding-base;
-            padding-right: variables.$padding-base;
+            padding-left: map.get(variables.$padding, "medium");
+            padding-right: map.get(variables.$padding, "medium");
 
             #logo {
                 text-align: center;
@@ -107,3 +118,14 @@
         }
     }
 }
+
+
+/*
+    Este mixin solo existe para usar interpolación, no se usa en la página
+*/
+
+@mixin set-image($name) {
+    .image-#{$name} {
+      background-image: url("../../media/img/avif/#{$name}.avif");
+    }
+  }

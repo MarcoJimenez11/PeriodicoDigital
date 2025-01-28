@@ -4,7 +4,12 @@
 /*
   Devuelve el color dado por parámetro oscurecido en un porcentaje indicado
 */
-@function darken($color, $porcentaje: 10%) {
-  $color-negro: rgba(0, 0, 0, 1);
-  @return color.mix($color-negro, $color, $porcentaje);
+@function apply-filter($color, $porcentaje: 10%, $darken: true) {
+  $color-filtro: rgb(255, 255, 255);
+
+  @if $darken {
+    $color-filtro: rgba(0, 0, 0, 1);
+  }
+
+  @return color.mix($color-filtro, $color, $porcentaje);
 }

@@ -40,5 +40,12 @@ button {
 
 h3 {
     font-family: GuardianSansSemibold;
-    @include mixins.dinamic-text-size(2em);
+
+    @include mixins.dinamic-text-size(1.7em);
+}
+
+footer {
+    #direccion {
+        @include mixins.dinamic-text-size(1em);
+    }
 }
