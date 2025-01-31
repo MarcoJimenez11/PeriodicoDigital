@@ -33,7 +33,7 @@
 @mixin dinamic-text-size($default-size: 1em) {
 
     @media (min-width: 1640px) {
-        font-size: $default-size * 2;
+        font-size: $default-size * 1.2;
     }
 
     @media (max-width: 1639px) {
