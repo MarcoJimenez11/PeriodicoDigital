@@ -10,9 +10,22 @@
 </head>
 
 <body>
-    <?php
-    require "header.html";
-    ?>
+<header>
+    <nav class="banner">
+        <a href="../index.html" class="logo"><h1 id="logo">LA LIBERTAD</h1></a>
+        <section>
+            <a href="register.php" class="button"><button class="buttonCTA" id="buttonRegister"><strong>Regístrate</strong></button></a>
+            <a href="login.php"><i class="fa-solid fa-circle-user fa-3x" id="loginIcon"></i></a>
+        </section>
+    </nav>
+    <nav class="menu">
+        <a href="detailedNew.php">Noticias oficiales</a>
+        <a href="">Noticias de usuarios</a>
+        <a href="">Categorías</a>
+        <a href="">Búsqueda</a>
+        <a href="contact.php">Contacto</a>
+    </nav>
+</header>
 
     <section class="sectionNewDetailed">
         <h1 class="newTitle">Termina el partido con victoria para la selección Española</h1>
@@ -50,9 +63,12 @@
             será la final de este emocionante torneo.</p>
     </section>
     
-    <?php
-    require "footer.html";
-    ?>
+    <footer>
+    <a href="" id="direccion">Av. de Francisco Ayala, s/n, Chana, 18014 Granada</a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/marco-jiménez-ureña-7424b0183" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+</footer>
 </body>
 
 </html>
