@@ -1,13 +1,21 @@
 @use 'base/typography';
+
 @use 'global/mixins';
 @use 'global/functions';
 @use 'global/variables';
+
 @use 'components/buttons';
 @use 'components/header';
 @use 'components/body';
 @use 'components/footer';
 @use 'components/news_block';
+@use 'components/news_detailed';
+@use 'components/form';
+
 @use 'position/header_position';
 @use 'position/body_position';
 @use 'position/footer_position';
 @use 'position/news_position';
+@use 'position/form_position';
+@use 'position/userconfig_position';
+@use 'position/contact_position';

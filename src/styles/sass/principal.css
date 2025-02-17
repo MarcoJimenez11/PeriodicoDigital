@@ -227,6 +227,80 @@ h3 {
   }
 }
 
+/*
+Noticia detallada
+*/
+@media (min-width: 1640px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 3.6em;
+  }
+}
+@media (max-width: 1639px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 3em;
+  }
+}
+@media (max-width: 480px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 2em;
+  }
+}
+@media (max-width: 250px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 170px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 1em;
+  }
+}
+@media (max-width: 100px) {
+  .sectionNewDetailed .newTitle {
+    font-size: 0.75em;
+  }
+}
+@media (min-width: 1640px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 1.44em;
+  }
+}
+@media (max-width: 1639px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 480px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 250px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 0.48em;
+  }
+}
+@media (max-width: 170px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 0.4em;
+  }
+}
+@media (max-width: 100px) {
+  .sectionNewDetailed .newDescription {
+    font-size: 0.3em;
+  }
+}
+
 button {
   background-color: #296db0;
   color: #e9f6ff;
@@ -234,7 +308,7 @@ button {
   border-radius: 8px;
 }
 button:hover {
-  background-color: #995e32;
+  background-color: #1f5284;
   cursor: pointer;
 }
 
@@ -245,7 +319,18 @@ button:hover {
   border-radius: 8px;
 }
 .buttonCTA:hover {
-  background-color: #995e32;
+  background-color: #87532c;
+  cursor: pointer;
+}
+
+.buttonForm {
+  background-color: #296db0;
+  color: #e9f6ff;
+  border-color: #171717;
+  border-radius: 8px;
+}
+.buttonForm:hover {
+  background-color: #1f5284;
   cursor: pointer;
 }
 
@@ -253,19 +338,21 @@ header {
   background-color: #296db0;
   color: #e9f6ff;
 }
-
-#logo {
+header .banner a {
+  color: inherit;
+  text-decoration: none;
+}
+header .banner #logo {
   cursor: pointer;
 }
-
-#loginIcon {
+header .banner #loginIcon {
   cursor: pointer;
   border: 2px;
   border-style: solid;
   border-radius: 50%;
   border-color: #171717;
 }
-#loginIcon:hover {
+header .banner #loginIcon:hover {
   box-shadow: 2px 2px 2px #171717;
 }
 
@@ -356,6 +443,51 @@ footer i {
 .newsBlock:hover {
   filter: brightness(70%);
   cursor: pointer;
+}
+
+.sectionNewDetailed {
+  display: block;
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 200px;
+}
+.sectionNewDetailed .newImage img {
+  margin: auto;
+}
+@media (min-width: 3200px) {
+  .sectionNewDetailed .newImage img {
+    max-width: 1200px;
+    min-width: 800px;
+  }
+}
+@media (max-width: 3199px) {
+  .sectionNewDetailed .newImage img {
+    max-width: 800px;
+    min-width: 400px;
+  }
+}
+@media (max-width: 1640px) {
+  .sectionNewDetailed .newImage img {
+    max-width: 600px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .sectionNewDetailed .newImage img {
+    max-width: 200px;
+    min-width: 50px;
+  }
+}
+.sectionNewDetailed .newDescription {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+form input {
+  border-radius: 8px;
 }
 
 header {
@@ -515,4 +647,113 @@ footer a, footer i {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.userForm input {
+  margin-bottom: 10px;
+  height: 30px;
+}
+.userForm .buttonForm {
+  height: 50px;
+}
+
+#formPublishNew input {
+  width: 80%;
+}
+#formPublishNew .buttonForm {
+  width: 20%;
+  font-size: 1.5em;
+}
+#formPublishNew textarea {
+  border-radius: 10px;
+  width: 80%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#userConfig {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (min-width: 800px) {
+  #userConfig {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 799px) {
+  #userConfig {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#userConfig #leftConfig {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  #userConfig #leftConfig {
+    margin-right: 100px;
+  }
+}
+#userConfig #rightConfig {
+  display: flex;
+  flex-direction: column;
+}
+#userConfig i {
+  font-size: 250px;
+  margin-bottom: 20px;
+}
+#userConfig button {
+  height: 40px;
+  font-size: 1.5em;
+}
+
+#contactSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#contactSection h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#contactSection section {
+  display: flex;
+  justify-content: space-between;
+}
+#contactSection section #googleMap {
+  max-width: 50%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+#contactSection section form {
+  width: 50%;
+  padding: 1%;
+}
+#contactSection section form input {
+  width: 90%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#contactSection section form textarea {
+  width: 90%;
+  height: 70%;
+  margin-bottom: 10px;
+}
+#contactSection section form .buttonForm {
+  width: 20%;
+  font-size: 1.5em;
 }/*# sourceMappingURL=principal.css.map */

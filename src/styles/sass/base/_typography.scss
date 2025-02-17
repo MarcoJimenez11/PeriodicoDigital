@@ -49,3 +49,18 @@ footer {
         @include mixins.dinamic-text-size(1em);
     }
 }
+
+/*
+Noticia detallada
+*/
+
+.sectionNewDetailed {
+    .newTitle {
+        @include mixins.dinamic-text-size(3em);
+    }
+
+
+    .newDescription {
+        @include mixins.dinamic-text-size(1.2em);
+    }
+}

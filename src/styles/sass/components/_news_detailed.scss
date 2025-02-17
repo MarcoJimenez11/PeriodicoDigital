@@ -1,0 +1,41 @@
+.sectionNewDetailed {
+    display: block;
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+
+    .newImage {
+        img {
+            @media (min-width: 3200px) {
+                max-width: 1200px;
+                min-width: 800px;
+            }
+
+            @media (max-width: 3199px) {
+                max-width: 800px;
+                min-width: 400px;
+            }
+
+            @media (max-width: 1640px) {
+                max-width: 600px;
+                min-width: 100px;
+            }
+
+            @media (max-width: 600px) {
+                max-width: 200px;
+                min-width: 50px;
+            }
+
+            margin: auto;
+        }
+
+    }
+
+    .newDescription {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+}

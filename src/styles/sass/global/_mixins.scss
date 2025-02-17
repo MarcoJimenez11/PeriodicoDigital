@@ -15,7 +15,7 @@
     border-radius: 8px;
 
     &:hover {
-        background-color: functions.apply-filter(variables.$color-resalto, 15%);
+        background-color: functions.apply-filter($background-color, 25%);
         cursor: pointer;
     }
 }
@@ -126,6 +126,6 @@
 
 @mixin set-image($name) {
     .image-#{$name} {
-      background-image: url("../../media/img/avif/#{$name}.avif");
+        background-image: url("../../media/img/avif/#{$name}.avif");
     }
-  }
+}

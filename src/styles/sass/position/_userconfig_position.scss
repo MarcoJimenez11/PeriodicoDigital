@@ -1,0 +1,41 @@
+#userConfig {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (min-width: 800px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 799px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #leftConfig {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @media (min-width: 800px) {
+            margin-right: 100px;
+        }
+        
+    }
+
+    #rightConfig {
+        display: flex;
+        flex-direction: column;
+    }
+
+    i {
+        font-size: 250px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 1.5em;
+    }
+}

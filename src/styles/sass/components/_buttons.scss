@@ -9,3 +9,7 @@ button {
 .buttonCTA {
     @include mixins.button(variables.$color-resalto, variables.$color-neutro);
 }
+
+.buttonForm {
+    @include mixins.button(variables.$color-principal, variables.$color-neutro);
+}

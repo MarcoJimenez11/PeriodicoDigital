@@ -6,24 +6,32 @@
 header {
     background-color: variables.$color-principal;
     color: variables.$color-neutro;
-}
 
-#logo {
-    cursor: pointer;
-}
+    .banner {
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-#loginIcon {
-    cursor: pointer;
-    border: 2px;
-    border-style: solid;
-    border-radius: 50%;
-    border-color: variables.$color-neutro2;
+        #logo {
+            cursor: pointer;
+        }
 
-    &:hover {
-        @include mixins.box-shadow(2px, 2px, 2px, variables.$color-neutro2);
+        #loginIcon {
+            cursor: pointer;
+            border: 2px;
+            border-style: solid;
+            border-radius: 50%;
+            border-color: variables.$color-neutro2;
+        
+            &:hover {
+                @include mixins.box-shadow(2px, 2px, 2px, variables.$color-neutro2);
+            }
+        
+        }
     }
-
 }
+
 
 .menu {
 
