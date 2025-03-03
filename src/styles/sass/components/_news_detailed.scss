@@ -1,8 +1,8 @@
 .sectionNewDetailed {
     display: block;
     text-align: center;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 5%;
+    margin-left: 5%;
     margin-bottom: 200px;
 
     .newImage {
@@ -23,8 +23,8 @@
             }
 
             @media (max-width: 600px) {
-                max-width: 200px;
-                min-width: 50px;
+                max-width: 100%;
+                min-width: 100px;
             }
 
             margin: auto;
